@@ -1,0 +1,123 @@
+.spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        0deg, #ff00cc, 0%, #333399, 100%);
+    animation: spin .5s infinite linear;
+}
+
+.spinner:after {
+    width: 85%;
+    height: 85%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-wrapper {
+    width: 60px;
+    height: 60px;
+}
+
+.loader {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #162534;
+    border-top-color: #4bc8eb;
+    border-bottom-color: #f13a8f;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+
+.loader-inner {
+    border-top-color: #36f372;
+    border-bottom-color: #fff;
+    animation-duration: 2.5s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: scale(1) rotate(360deg);
+    }
+    50% {
+        transform: scale(.8) rotate(-360deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+div {
+    width: 20rem;
+    height: 20rem;
+    background:radial-gradient(
+        circle at 33% 100%,
+        #fed373 4%,
+        #f15245 30%,
+        #d92e7f 62%,
+        #9b36b7 85%,
+        #515ecf);
+    border-radius: 30%;
+    position: relative;        
+}
+
+div:before {
+    content: '';
+    border: 1rem solid #fff;
+    border-radius: 30%;
+    width: 12.5rem;
+    height: 12.5rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+div:after {
+    content: '';
+    border: 1rem solid #fff;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+span {
+    content: '';
+    border: 1rem solid #fff;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    right: 5rem;
+    position: absolute;
+    margin: auto;
+    top: 5rem;
+}
